@@ -1,0 +1,26 @@
+
+Az ImagePanel logikája, főbb algoritmusa:
+
+
+Az ImagePanel osztály első lényege a:
+	public void paintComponent(Graphics g) {
+		g.drawImage(image,0, 0,this.getWidth(),this.getHeight(),null);  
+	}
+ami azt csinálja, hogy visible-re váltáskor vagy repaint()-nél az image-ben levő képet jeleníti meg.
+
+
+Kartya osztály:
+
+Minden egyes példányhoz tartozik egy String hatter (mivel ez mindegyiknél közös, ezért lett static), és egy String kep, amit a constructorban kap meg.
+
+lefordit(): a hatteret tölti be az image-be, majd repaint()-el frissit.
+felfordit(): a kepet tölti be az image-be, majd repaint()-el frissit.
+
+Ha ráklikkelnek a példányra, akkor felforditjuk
+	-ha a klikk páratlan, akkor ezt a példányt az elozoPanel-be tesszük
+	-ha páros, akkor megnézzük, egyezik e a kep-e az elozoPanel-éval, ha igen, akkor felfordítva maradnak, ha nem, akkor 1mp (1000 milisekundum) múlva lefelé forditjuk őket.
+Ha mindegyik kész, megállunk.
+
+A klikelésnél a felfordi() után a this.update(this.getGraphics()); csak a régebbi verzióban kell, aminél nem Timerrel, hanem Thread.sleep()-el volt megoldva az 1 mp-es késleltetés.
+Ez a this.update(this.getGraphics()); azt csinálja, hogy rögtön frissíti a megjelenítést - normálisan csak a klikk-függvény lefutása után frissülne a megjelenítés,
+de mivel ott a Thread.sleep(), miatt 1 mp-et áll a program, egy másodpercig nem frissülne. Viszont ez a probléma Timer esetén nem áll fenn, itt felesleges ez a frissítés (de nem káros).
