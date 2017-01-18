@@ -17,8 +17,8 @@ import javax.swing.Timer;
 public class ShowTime extends JLabel {
 
   private Timer time;
-  SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-  Calendar cal = Calendar.getInstance();
+  private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+  private Calendar cal = Calendar.getInstance();
   // Kísérlet az állandó időlekérés elkerülésére:
   private long now = 0;
   private final int MASK = 1024 * 63;
