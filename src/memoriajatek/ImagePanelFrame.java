@@ -1,4 +1,3 @@
-
 package memoriajatek;
 
 import java.awt.Container;
@@ -45,19 +44,19 @@ public class ImagePanelFrame extends JFrame implements ActionListener {
     }
   };
   WindowAdapter windowAdapter = new WindowAdapter() {
-      @Override
-      public void windowClosing(WindowEvent e) {
-        int close = JOptionPane.showConfirmDialog(rootPane,
-                "Tényleg bezárod a programot?",
-                "Program bezárása",
-                JOptionPane.OK_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE);
-        if (close != JOptionPane.OK_OPTION) {
-          return;
-        }
-        System.exit(0);
+    @Override
+    public void windowClosing(WindowEvent e) {
+      int close = JOptionPane.showConfirmDialog(rootPane,
+              "Tényleg bezárod a programot?",
+              "Program bezárása",
+              JOptionPane.OK_CANCEL_OPTION,
+              JOptionPane.QUESTION_MESSAGE);
+      if (close != JOptionPane.OK_OPTION) {
+        return;
       }
-    };
+      System.exit(0);
+    }
+  };
 
   public ImagePanelFrame() {
     darab = 4;
@@ -69,6 +68,8 @@ public class ImagePanelFrame extends JFrame implements ActionListener {
     setTitle("Memória játék");
     mainPanel = new ImagePanel("images/zoo3.png");
     mainPanel.setLayout(null);
+    // Direkt itt hagyott példa az ImagePanel-re:
+//    mainPanel.setPreferredSize(mainPanel.getSize());
     mainPanel.setPreferredSize(new Dimension(800, 600));
     cp.add(gui);
     gui.add(mainPanel);
@@ -101,6 +102,8 @@ public class ImagePanelFrame extends JFrame implements ActionListener {
     mainPanel.add(mcs);
     mainPanel.add(ng);
 
+    // Direkt itt hagyott példa az ImagePanel-re:
+//    mainPanel.add(new ImagePanel(40, 80, 100, 150, "images/12.jpg"));
     this.pack();
 
     setLocationRelativeTo(this);

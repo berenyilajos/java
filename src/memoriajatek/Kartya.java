@@ -1,4 +1,3 @@
-
 package memoriajatek;
 
 import java.awt.Cursor;
