@@ -3,6 +3,8 @@ package memoriajatek;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -39,6 +41,11 @@ public class Kartyak extends JPanel {
     setBounds(160 + ((6 - db) * 30), 20 + ((6 - db) * 20), db * 80 + ((6 - db) * 20), db * 80 + ((6 - db) * 20));
     setVisible(false);
     setLayout(new GridLayout(db, db, 24 / db, 24 / db));
+//    for (Iterator<String> iterator = getKepek(db * db).iterator(); iterator.hasNext();) {
+//		String kep = iterator.next();
+//		add(new Kartya("images/" + kep));
+//	}
+    // java 8:
     getKepek(db * db).forEach((kep) -> {
       add(new Kartya("images/" + kep));
     });
