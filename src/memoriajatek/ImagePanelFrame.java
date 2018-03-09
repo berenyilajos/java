@@ -23,6 +23,7 @@ import javax.swing.border.EmptyBorder;
  */
 public class ImagePanelFrame extends JFrame implements ActionListener {
 
+  private static final long serialVersionUID = 1L;
   private Container cp = getContentPane();
   private Kartyak kartyak;
   private JPanel gui;

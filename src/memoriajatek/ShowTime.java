@@ -16,6 +16,7 @@ import javax.swing.Timer;
  */
 public class ShowTime extends JLabel {
 
+  private static final long serialVersionUID = 1L;
   private Timer time;
   private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
   private Calendar cal = Calendar.getInstance();

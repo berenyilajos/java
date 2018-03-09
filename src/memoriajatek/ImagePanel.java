@@ -16,6 +16,7 @@ import javax.swing.border.LineBorder;
  */
 public class ImagePanel extends JPanel {
 
+  private static final long serialVersionUID = 1L;
   protected BufferedImage image;
   protected String kep;
   protected String img;

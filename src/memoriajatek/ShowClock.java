@@ -18,6 +18,7 @@ import javax.swing.Timer;
  */
 public class ShowClock extends JLabel {
 
+  private static final long serialVersionUID = 1L;
   private static Date beginDate;
   private Timer clock;
   long sec = 0;

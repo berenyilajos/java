@@ -1,10 +1,10 @@
 package memoriajatek;
 
-import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
 import javax.swing.Timer;
 
 /**
@@ -13,6 +13,7 @@ import javax.swing.Timer;
  */
 public class Kartya extends ImagePanel implements MouseListener {
 
+  private static final long serialVersionUID = 1L;
   private static String hatter = "images/hatter1.jpg";
   private static int klikk = 0, hattalVan;
   private static Kartya elozokartya = null;

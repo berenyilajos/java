@@ -3,7 +3,6 @@ package memoriajatek;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -15,6 +14,7 @@ import javax.swing.SwingUtilities;
  */
 public class Kartyak extends JPanel {
 
+  private static final long serialVersionUID = 1L;
   private final int KEPSZAM = 27;
   private ArrayList<String> kepek;
 
