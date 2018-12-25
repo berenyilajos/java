@@ -24,13 +24,10 @@ public class Kartya extends ImagePanel implements MouseListener {
     super(file);
     lefordit();
     addMouseListener(this);
-    lefele = new Timer(1000, new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        lefordit();
-        lefeleStop();
-//                System.out.println(hattalVan); // ellenőrzés
-      }
+    lefele = new Timer(1000, (ActionEvent e) -> {
+      lefordit();
+      lefeleStop();
+//      System.out.println(hattalVan); // ellenőrzés
     });
   }
 
