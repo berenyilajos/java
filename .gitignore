@@ -5,3 +5,8 @@
 manifest.mf
 build.xml
 /out/
+memoriajatek.iml
+.classpath
+.idea/
+.project
+.settings/
